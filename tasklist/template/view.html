@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ task.title }} | Task Details</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container py-5">
+  <a href="{{ url_for('index_view') }}" class="btn btn-secondary mb-3">← Back</a>
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h3 class="card-title">{{ task.title }}</h3>
+      <h6 class="text-muted mb-3">Status: {{ task.status }}</h6>
+      <p class="card-text">{{ task.content }}</p>
+      <hr>
+      <small class="text-muted">Task ID: {{ task.id }}</small>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
